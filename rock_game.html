@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <meta charset="UTF-8"/>
+</head>
+<body>
+  <script>
+
+    //randomly determines the computer's move
+    function computerPlay() {
+      let choices = ['rock', 'paper', 'scissors'];
+      var index = Math.floor(Math.random() * choices.length);
+      return choices[index];
+    }
+
+    //player is prompted for move selection
+    const playerSelection = prompt('Rock, Paper, or Scissors?');
+
+
+    //this function compares the player's input against the computer's to determine a winner
+    function playRound (playerSelection, computerSelection) {
+      
+      let computerSelection = computerPlay();
+      let playerSelection1 = playerSelection.toLowerCase();
+
+      if (playerSelection1 == computerSelection) {
+        return "You tied!";
+      }
+      else if (playerSelection1 === 'rock' && computerSelection === 'paper') {
+        return "You lose. Paper beats rock.";
+      }
+      else if (playerSelection1 === 'rock' && computerSelection === 'scissors') {
+        return "You win! Rock beats scissors.";
+      }
+      else if (playerSelection1 === 'paper' && computerSelection === 'rock') {
+        return "You win! Paper beats rock.";
+      }
+      else if (playerSelection1 === 'paper' && computerSelection === 'scissors') {
+        return "You lose. Scissors beats paper.";
+      }
+      else if (playerSelection1 === 'scissors' && computerSelection === 'rock') {
+        return "You lose. Rock beats scissors.";
+      }
+      else if (playerSelection1 === 'scissors' && computerSelection === 'paper') {
+        return "You win! Scissors beats paper.";
+      }
+      else {
+        return "Your choice was invalid. Please play again.";
+      }
+    }
+    
+    
+    //this function should use a looping structure to play five rounds and determine a winner
+    function game() {
+        
+    }
+    
+  </script>
+</body>
+</html>
