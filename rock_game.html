@@ -78,7 +78,15 @@
                     i--;
                 }
       }
-        
+      if (playerScore > computerScore) {
+        console.log(`After five rounds, your score is ${playerScore} and the computer's score is ${computerScore}. You win!`);
+      }
+      else if (playerScore < computerScore) {
+        console.log(`After five rounds, your score is ${playerScore} and the computer's score is ${computerScore}. Better luck next time!`);
+      }
+      else {
+        console.log(`After five rounds, your score is ${playerScore} and the computer's score is ${computerScore}. You tied.`);
+      }
     }
     
   </script>
