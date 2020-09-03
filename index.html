@@ -3,13 +3,14 @@
     <head>
         <meta charset="utf-8">
         <title>Rock Paper Scissors Game</title>
+        <link rel="stylesheet" href="style.css">
         <body>
           <header> 
               <h1>Rock Paper Scissors</h1>
           </header>
           <div class="scoreboard">
-              <div id="user-label" class="badge">user</div>
-              <div id="computer-label" class="badge">comp</div>
+              <div class="badge" id="user-label">user</div>
+              <div class="badge" id="computer-label">comp</div>
               <span id="user-score">0</span>:<span id="computer-score">0</span>
           </div>
 
@@ -17,7 +18,17 @@
               <p>Paper covers rock. You win!</p>
           </div>
 
-          <div class="choices"></div>
+          <div class="choices">
+              <div class="choice" id="rock">
+                  <img src="rps_images/icons8-hand-rock-96.png" alt=""></div>
+              <div class="choice" id="paper">
+                  <img src="rps_images/icons8-hand-96.png" alt=""></div>
+              <div class="choice" id="scissors">
+                  <img src="rps_images/icons8-hand-scissors-96.png" alt=""></div>
+          </div>
+
+          <p id="action-message">Make your move.</p>
+          <script src="app.js" charset="utf-8"></script>
         </body>
     </head>
 </html>
